@@ -10,4 +10,13 @@
 
 @interface SBViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *amount;
+@property (strong, nonatomic) IBOutlet UIButton *waitingBtn;
+@property (assign, nonatomic) BOOL timerActive;
+@property (strong, nonatomic) NSTimer *waitingTimer;
+
+- (IBAction)minus:(id)sender;
+- (IBAction)plus:(id)sender;
+- (IBAction)toggleWaitingForService:(id)sender;
+
 @end

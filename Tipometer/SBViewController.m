@@ -17,13 +17,68 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.timerActive = NO;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)minus:(id)sender {
+    int amountData = [self.amount.text intValue];
+    amountData = amountData - 5;
+    
+    self.amount.text = [NSString stringWithFormat:@"%d",amountData];
 }
+
+- (IBAction)plus:(id)sender {
+    int amountData = [self.amount.text intValue];
+    amountData = amountData + 5;
+    
+    self.amount.text = [NSString stringWithFormat:@"%d",amountData];
+}
+
+- (IBAction)toggleWaitingForService:(id)sender {
+    
+    if(self.timerActive) {
+        [self stopTimer];
+    } else {
+        [self startTimer];
+    }
+    
+}
+
+- (void) stopTimer {
+    
+    self.timerActive = NO;
+    
+    [self.waitingBtn setTitle:@"Waiting for service" forState:UIControlStateNormal];
+    [self.waitingBtn setBackgroundImage:[UIImage imageNamed:@"Waiting btn.png"] forState:UIControlStateNormal];
+    
+    [self.waitingTimer invalidate];
+    self.waitingTimer = nil;
+}
+
+- (void) startTimer {
+    
+    self.timerActive = YES;
+    
+    [self.waitingBtn setTitle:@"Ticking ..." forState:UIControlStateNormal];
+    [self.waitingBtn setBackgroundImage:[UIImage imageNamed:@"waiting btn pressed.png"] forState:UIControlStateNormal];
+    
+    self.waitingTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                     target:self
+                                   selector:@selector(tick:)
+                                   userInfo:nil
+                                    repeats:YES];
+}
+
+- (void) tick:(NSTimer *) timer {
+    
+    int amountData = [self.amount.text intValue];
+    amountData = amountData - 1;
+    
+    self.amount.text = [NSString stringWithFormat:@"%d",amountData];
+    
+}
+
+
 
 @end
