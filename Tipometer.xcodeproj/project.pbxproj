@@ -21,6 +21,9 @@
 		5CF91ECB18FAED620000D166 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF91EAD18FAED620000D166 /* UIKit.framework */; };
 		5CF91ED318FAED620000D166 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CF91ED118FAED620000D166 /* InfoPlist.strings */; };
 		5CF91ED518FAED620000D166 /* TipometerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF91ED418FAED620000D166 /* TipometerTests.m */; };
+		5CF91EE018FB22020000D166 /* SBSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF91EDF18FB22020000D166 /* SBSettingsTableViewController.m */; };
+		5CF91EE318FB2AD40000D166 /* SBFoursquareParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF91EE218FB2AD40000D166 /* SBFoursquareParser.m */; };
+		5CF91EE618FC67420000D166 /* SBVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF91EE518FC67420000D166 /* SBVenue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		5CF91ED018FAED620000D166 /* TipometerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TipometerTests-Info.plist"; sourceTree = "<group>"; };
 		5CF91ED218FAED620000D166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5CF91ED418FAED620000D166 /* TipometerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipometerTests.m; sourceTree = "<group>"; };
+		5CF91EDE18FB22020000D166 /* SBSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSettingsTableViewController.h; sourceTree = "<group>"; };
+		5CF91EDF18FB22020000D166 /* SBSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSettingsTableViewController.m; sourceTree = "<group>"; };
+		5CF91EE118FB2AD40000D166 /* SBFoursquareParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBFoursquareParser.h; path = ../SBFoursquareParser.h; sourceTree = "<group>"; };
+		5CF91EE218FB2AD40000D166 /* SBFoursquareParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBFoursquareParser.m; path = ../SBFoursquareParser.m; sourceTree = "<group>"; };
+		5CF91EE418FC67420000D166 /* SBVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBVenue.h; sourceTree = "<group>"; };
+		5CF91EE518FC67420000D166 /* SBVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBVenue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +124,14 @@
 				5CF91EB818FAED620000D166 /* SBAppDelegate.h */,
 				5CF91EB918FAED620000D166 /* SBAppDelegate.m */,
 				5CF91EBB18FAED620000D166 /* Main.storyboard */,
+				5CF91EDE18FB22020000D166 /* SBSettingsTableViewController.h */,
+				5CF91EDF18FB22020000D166 /* SBSettingsTableViewController.m */,
 				5CF91EBE18FAED620000D166 /* SBViewController.h */,
 				5CF91EBF18FAED620000D166 /* SBViewController.m */,
+				5CF91EE418FC67420000D166 /* SBVenue.h */,
+				5CF91EE518FC67420000D166 /* SBVenue.m */,
+				5CF91EE118FB2AD40000D166 /* SBFoursquareParser.h */,
+				5CF91EE218FB2AD40000D166 /* SBFoursquareParser.m */,
 				5CF91EC118FAED620000D166 /* Images.xcassets */,
 				5CF91EB018FAED620000D166 /* Supporting Files */,
 			);
@@ -250,9 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF91EE318FB2AD40000D166 /* SBFoursquareParser.m in Sources */,
 				5CF91EB618FAED620000D166 /* main.m in Sources */,
 				5CF91EC018FAED620000D166 /* SBViewController.m in Sources */,
 				5CF91EBA18FAED620000D166 /* SBAppDelegate.m in Sources */,
+				5CF91EE618FC67420000D166 /* SBVenue.m in Sources */,
+				5CF91EE018FB22020000D166 /* SBSettingsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "SBViewController.h"
+#import "SBFoursquareParser.h"
 
 @interface SBViewController ()
 
@@ -17,6 +18,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    SBFoursquareParser *fsParser = [[SBFoursquareParser alloc] init];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            SBVenue *venue = [fsParser getVenuesCloseToLongitude:[NSNumber numberWithInt:1] andLatitude:[NSNumber numberWithInt:1]];
+            [self.venueNameLabel setText:venue.name];
+            [self.locationLabel setText:[NSString stringWithFormat:@"%@, %@", venue.address, venue.city]];
+            
+        });
+    });
+    
+    
     
     self.timerActive = NO;
 }

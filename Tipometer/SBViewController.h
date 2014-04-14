@@ -14,6 +14,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *waitingBtn;
 @property (assign, nonatomic) BOOL timerActive;
 @property (strong, nonatomic) NSTimer *waitingTimer;
+@property (strong, nonatomic) IBOutlet UILabel *venueNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 
 - (IBAction)minus:(id)sender;
 - (IBAction)plus:(id)sender;
